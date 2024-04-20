@@ -28,6 +28,6 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: |
-        vim .env 
+        sudo vim .env 
         echo "${{ secrets.PROD_ENV_FILE }}" > .env
   
