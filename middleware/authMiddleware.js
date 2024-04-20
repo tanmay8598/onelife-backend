@@ -2,7 +2,6 @@ const jwt = require("jsonwebtoken");
 const Admin = require("../models/adminModel");
 const asyncHandler = require("express-async-handler");
 
-
 const admin = asyncHandler(async (req, res, next) => {
   try {
     const token = req.header("x-auth-token");

@@ -7,7 +7,7 @@ const router = express.Router();
 const multerS3 = require("multer-s3");
 
 const { S3Client } = require("@aws-sdk/client-s3");
-const { admin } = require("../middleware/authmiddleware");
+const { admin } = require("../middleware/authMiddleware");
 // const { admin } = require("../middleware/authMiddleware");
 
 const config = {
