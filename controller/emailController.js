@@ -29,7 +29,7 @@ const getEmails = asyncHandler(async (req, res) => {
     pageCount = pageCount + 1;
   }
 
-  const blogs = await Form.find({})
+  const blogs = await Email.find({})
     .limit(pageSize)
     .skip(pageSize * (page - 1))
     .sort({ _id: -1 });
