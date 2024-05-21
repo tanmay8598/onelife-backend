@@ -70,7 +70,7 @@ const getBlogs = asyncHandler(async (req, res) => {
   const blogs = await Blog.find({})
     .limit(pageSize)
     .skip(pageSize * (page - 1))
-    .sort({ createdAt: -1 });
+    .sort({ _id: -1 });
 
   res.status(201).json({ blogs, pageCount });
 });
