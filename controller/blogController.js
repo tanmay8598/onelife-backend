@@ -70,14 +70,13 @@ const getBlogs = asyncHandler(async (req, res) => {
   const blogs = await Blog.find({})
     .limit(pageSize)
     .skip(pageSize * (page - 1))
-    .sort({ _id: -1 });
+    .sort({ createdAt: -1 });
 
   res.status(201).json({ blogs, pageCount });
 });
 
 const deleteBlog = asyncHandler(async (req, res) => {
   const BlogId = req.query.blogId;
-  console.log("first");
   const blog = await Blog.findById(BlogId);
 
   if (blog) {
